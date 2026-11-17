@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohmatulloh | Full-Stack Web & Mobile Developer</title>
+    <meta name="description"
+        content="Portofolio Rohmatulloh - Sarjana Sistem Informasi, Full-Stack Developer (Laravel, React, Inertia.js), Penulis Buku Teknis & Peneliti.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#0B0F19',
+                        card: '#111827',
+                        border: '#1F2937',
+                        accent: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #F3F4F6;
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+        }
+
+        .code-glow:hover {
+            box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.15);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono font-semibold text-lg tracking-tight text-white flex items-center gap-2">
+                <span class="text-emerald-400">~/</span>rohmatulloh10
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#tentang" class="hover:text-emerald-400 transition">Tentang</a>
+                <a href="#keahlian" class="hover:text-emerald-400 transition">Tech Stack</a>
+                <a href="#proyek" class="hover:text-emerald-400 transition">Proyek</a>
+                <a href="#publikasi" class="hover:text-emerald-400 transition">Jurnal</a>
+                <a href="#kontak"
+                    class="px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500 hover:text-gray-950 transition">
+                    Hubungi Saya
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-b border-border px-6 py-4 space-y-3 text-sm">
+            <a href="#tentang" class="block text-gray-300 hover:text-emerald-400">Tentang</a>
+            <a href="#keahlian" class="block text-gray-300 hover:text-emerald-400">Tech Stack</a>
+            <a href="#proyek" class="block text-gray-300 hover:text-emerald-400">Proyek</a>
+            <a href="#publikasi" class="block text-gray-300 hover:text-emerald-400">Jurnal</a>
+            <a href="#kontak" class="block text-emerald-400 font-medium">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 md:pt-44 md:pb-28 px-6 max-w-6xl mx-auto">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <!-- Kolom Kiri: Teks & Tombol -->
+            <div class="max-w-2xl">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Available for Software Engineering & IT Roles
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
+                    Halo, saya <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Rohmatulloh</span>.
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
+                    Full-Stack Web & Mobile Developer, Penulis Buku Teknis, dan Lulusan Sistem Informasi (IPK 3.72).
+                    Berfokus pada pembangunan sistem ERP terintegrasi, aplikasi modern berbasis <span
+                        class="text-gray-200 font-medium">Laravel, React & Inertia.js</span>, serta arsitektur perangkat
+                    lunak yang efisien.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#proyek"
+                        class="px-6 py-3 rounded-lg bg-emerald-500 text-gray-950 font-semibold hover:bg-emerald-400 transition flex items-center gap-2">
+                        Lihat Proyek <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://github.com/rohmatulloh10" target="_blank" rel="noopener"
+                        class="px-6 py-3 rounded-lg bg-card border border-border text-gray-200 font-semibold hover:bg-emerald-500 hover:text-black hover:border-emerald-500 transition flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        <span>GitHub Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Foto Profil -->
+            <!-- Kolom Kanan: Foto Profil -->
+            <div class="relative shrink-0 group">
+                <!-- Efek cahaya (glow) mengikuti bentuk lengkungan -->
+                <div
+                    class="absolute -inset-2 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-emerald-500/25 to-teal-400/15 blur-xl opacity-75 group-hover:opacity-100 transition duration-500">
+                </div>
+
+                <!-- Bingkai Foto Lengkungan Organik -->
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden border border-emerald-500/30 bg-card shadow-2xl transition-all duration-500 group-hover:rounded-[40%_60%_70%_30%/40%_70%_30%_60%]">
+                    <img src="profile1.png" alt="Foto Profil Rohmatulloh"
+                        class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 px-6 border-t border-border/60 bg-card/30">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-start">
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="font-mono text-sm text-emerald-400 uppercase tracking-wider">Tentang Saya</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Membangun Solusi Digital dari Konsep hingga
+                    Produksi</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Saya adalah Software Developer asal Jombang, Jawa Timur, dengan pengalaman sebagai Full-Stack
+                    Developer di
+                    <strong class="text-gray-200">PT. Nusatama Jaya Sakti</strong>. Terbiasa menangani
+                    migrasi platform,
+                    pengembangan antarmuka responsif menggunakan <span class="text-gray-200">Laravel, React.js,
+                        Inertia.js, dan
+                        TypeScript</span>, serta perancangan arsitektur database MySQL dan RESTful API.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Saya berpengalaman membangun berbagai solusi perangkat lunak mulai dari sistem manajemen konten
+                    (CMS), B2B CRM,
+                    integrasi sistem ERP, hingga aplikasi Mobile Sales Order berbasis Android. Terbiasa bekerja
+                    dalam alur kerja
+                    Agile/Scrum menggunakan Git dan GitHub untuk menghadirkan sistem yang terstruktur dan efisien.
+                </p>
+            </div>
+
+            <div class="md:col-span-5 bg-card border border-border rounded-xl p-6 space-y-5">
+                <div class="flex items-start gap-4">
+                    <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 mt-1">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">S1 Sistem Informasi</h4>
+                        <p class="text-sm text-gray-400">Universitas KH. A. Wahab Hasbullah</p>
+                        <p class="text-xs font-mono text-emerald-400 mt-1">Lulus 2026 • IPK 3.72 / 4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keahlian" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="mb-12">
+            <h2 class="font-mono text-sm text-emerald-400 uppercase tracking-wider mb-2">02. Tech Stack</h2>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">Teknologi & Perangkat Kerja</h3>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-card border border-border rounded-xl p-6 code-glow transition">
+                <div
+                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                    <i data-lucide="server" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-semibold text-white mb-3">Backend & API</h4>
+                <div class="flex flex-wrap gap-2 font-mono text-xs">
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">PHP 8+</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Laravel 12</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">CodeIgniter</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Python</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">REST API</span>
+                </div>
+            </div>
+
+            <div class="bg-card border border-border rounded-xl p-6 code-glow transition">
+                <div
+                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                    <i data-lucide="layout" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-semibold text-white mb-3">Frontend & Mobile</h4>
+                <div class="flex flex-wrap gap-2 font-mono text-xs">
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">React.js</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Inertia.js</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">TypeScript</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Tailwind CSS</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Shadcn UI</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Framework7</span>
+                </div>
+            </div>
+
+            <div class="bg-card border border-border rounded-xl p-6 code-glow transition">
+                <div
+                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                    <i data-lucide="database" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-semibold text-white mb-3">Database & Data</h4>
+                <div class="flex flex-wrap gap-2 font-mono text-xs">
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">MySQL</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Relational
+                        Design</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Query
+                        Optimization</span>
+                </div>
+            </div>
+
+            <div class="bg-card border border-border rounded-xl p-6 code-glow transition">
+                <div
+                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                    <i data-lucide="terminal" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-semibold text-white mb-3">Tools & Workflow</h4>
+                <div class="flex flex-wrap gap-2 font-mono text-xs">
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Git CLI</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Linux Terminal</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Self-Hosting</span>
+                    <span class="px-2.5 py-1 rounded bg-dark border border-border text-gray-300">Vite</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="proyek" class="py-20 px-6 border-t border-border/60 bg-card/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="font-mono text-sm text-emerald-400 uppercase tracking-wider mb-2">03. Portofolio Proyek
+                </h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Sistem & Aplikasi yang Dikembangkan</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article
+                    class="bg-card border border-border rounded-xl overflow-hidden flex flex-col justify-between code-glow transition group">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-emerald-400 mb-4">
+                            <i data-lucide="smartphone" class="w-7 h-7"></i>
+                            <span
+                                class="font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20">ERP
+                                & Mobile</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-2">
+                            Mobile Sales & ERP Integration (UD. Karya Sejati)
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                            Aplikasi pemesanan produk berbasis Android yang terintegrasi secara *real-time* dengan
+                            sistem induk ERP web untuk mempercepat alur distribusi dan pencatatan transaksi lapangan.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-border/50">
+                        <div class="flex flex-wrap gap-2 font-mono text-xs text-gray-400 mb-4">
+                            <span>Framework7</span> • <span>Laravel</span> • <span>MySQL</span> • <span>REST API</span>
+                        </div>
+                        <a href="https://github.com/rohmatulloh10" target="_blank"
+                            class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:underline">
+                            Detail Proyek <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-card border border-border rounded-xl overflow-hidden flex flex-col justify-between code-glow transition group">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-emerald-400 mb-4">
+                            <i data-lucide="layers" class="w-7 h-7"></i>
+                            <span
+                                class="font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20">Web
+                                App</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-2">
+                            SIMAP (Sistem Informasi Manajemen & LPJ)
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                            Platform digitalisasi administrasi, manajemen program kerja, dan pelaporan
+                            pertanggungjawaban (LPJ) terstruktur untuk organisasi PAC IPNU-IPPNU Sumobito.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-border/50">
+                        <div class="flex flex-wrap gap-2 font-mono text-xs text-gray-400 mb-4">
+                            <span>Laravel 12</span> • <span>React</span> • <span>Inertia.js</span> • <span>Shadcn
+                                UI</span>
+                        </div>
+                        <a href="https://github.com/rohmatulloh10" target="_blank"
+                            class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:underline">
+                            Detail Proyek <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-card border border-border rounded-xl overflow-hidden flex flex-col justify-between code-glow transition group">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-emerald-400 mb-4">
+                            <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
+                            <span
+                                class="font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20">CMS
+                                Architecture</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-2">
+                            Modern Blog CMS Admin Panel
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                            Arsitektur sistem manajemen konten modern dengan *Single Page Application* (SPA) tanpa
+                            kerumitan API terpisah, dilengkapi manajemen peran dan optimasi SEO.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-border/50">
+                        <div class="flex flex-wrap gap-2 font-mono text-xs text-gray-400 mb-4">
+                            <span>Laravel 12</span> • <span>React</span> • <span>Inertia.js</span> •
+                            <span>Tailwind</span>
+                        </div>
+                        <a href="https://github.com/rohmatulloh10" target="_blank"
+                            class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:underline">
+                            Source Code <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="publikasi" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="mb-12">
+            <h2 class="font-mono text-sm text-emerald-400 uppercase tracking-wider mb-2">04. Karya Tulis & Riset</h2>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">Publikasi Ilmiah</h3>
+        </div>
+
+        <div class="space-y-6">
+            <div
+                class="bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <span
+                        class="inline-block font-mono text-xs px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                        Jurnal Ilmiah • Jumat Informatika Vol. 6 No. 2 (2025)
+                    </span>
+                    <h4 class="text-xl font-bold text-white">
+                        Edukasi & Pengenalan Absensi Digital Berbasis RFID di MI Mabniyatul Ihsan
+                    </h4>
+                    <p class="text-sm text-gray-400 max-w-3xl">
+                        Penulis: <span class="text-gray-200">Rohmatulloh</span>, Lailatus Sa'adah
+                        ,Wisnu Mahendri, Fahmi Abdulloh Efendi, Toriq Andana Teguh Febriansyah, Abi Muhammad Wahid •
+                        DOI:
+                        <span class="font-mono text-xs text-gray-300">10.32764/abdimasif.v6i2.6283</span>
+                    </p>
+                </div>
+                <a href="https://doi.org/10.32764/abdimasif.v6i2.6283" target="_blank" rel="noopener"
+                    class="shrink-0 px-4 py-2.5 rounded-lg bg-dark border border-border text-sm font-medium text-gray-200 hover:border-emerald-500/50 hover:text-emerald-400 transition inline-flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> Baca Jurnal
+                </a>
+            </div>
+            <div
+                class="bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <span
+                        class="inline-block font-mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        Jurnal Ilmiah • JSITIK Vol. 5 No. 1 (2026)
+                    </span>
+                    <h4 class="text-xl font-bold text-white">
+                        Aplikasi Mobile Sales Berbasis Android untuk Pemesanan Produk pada UD. Karya Sejati
+                    </h4>
+                    <p class="text-sm text-gray-400">
+                        Penulis: <span class="text-gray-200">Rohmatulloh</span>, Moh. Anshori Aris Widya, Sujono • DOI:
+                        <span class="font-mono text-xs text-gray-300">10.53624/jsitik.v5i1.969</span>
+                    </p>
+                </div>
+                <a href="https://doi.org/10.53624/jsitik.v5i1.969" target="_blank" rel="noopener"
+                    class="shrink-0 px-4 py-2.5 rounded-lg bg-dark border border-border text-sm font-medium text-gray-200 hover:border-emerald-500/50 hover:text-emerald-400 transition inline-flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i> Baca Jurnal
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer id="kontak" class="py-20 px-6 border-t border-border bg-card/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-mono text-sm text-emerald-400 uppercase tracking-wider mb-3">05. Kontak</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Mari Berkolaborasi</h3>
+            <p class="text-gray-400 max-w-xl mx-auto mb-8">
+                Tertarik mendiskusikan pengembangan aplikasi web/mobile, peluang kerja di bidang Software Engineering /
+                IT, atau kolaborasi riset? Silakan hubungi saya melalui kanal berikut.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <a href="mailto:rohmatulloh8787@gmail.com"
+                    class="px-6 py-3 rounded-lg bg-card border border-border text-gray-200 font-semibold hover:bg-emerald-500 transition flex items-center gap-2 hover:text-gray-950">
+                    <i data-lucide="mail" class="w-4 h-4"></i> Kirim Email
+                </a>
+                <a href="https://github.com/rohmatulloh10" target="_blank" rel="noopener"
+                    class="px-6 py-3 rounded-lg bg-card border border-border text-gray-200 font-semibold hover:bg-emerald-500 transition flex items-center gap-2 hover:text-gray-950">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                        <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                    class="px-6 py-3 rounded-lg bg-card border border-border text-gray-200 font-semibold hover:bg-emerald-500 transition flex items-center gap-2 hover:text-gray-950">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect width="4" height="12" x="2" y="9" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/matthzz" target="_blank" rel="noopener"
+                    class="px-6 py-3 rounded-lg bg-card border border-border text-gray-200 font-semibold hover:bg-emerald-500 transition flex items-center gap-2 hover:text-gray-950">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+
+            </div>
+
+            <div class="text-sm text-gray-500 font-mono">
+                &copy; 2026 Rohmatulloh. Dibangun dengan Tailwind CSS &amp; di-host di GitHub Pages.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
